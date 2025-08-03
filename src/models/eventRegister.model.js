@@ -67,4 +67,4 @@ const eventRegisterSchema = new Schema({
     },
 }, { timestamps: true });
 
-export const EventRegister = mongoose.model("eventRegisters", eventRegisterSchema)
+export const EventRegister = mongoose.model("eventregisters", eventRegisterSchema)

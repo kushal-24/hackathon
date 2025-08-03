@@ -6,7 +6,7 @@ import { User } from "../models/user.model.js"; // Make sure this path is correc
 
 export const verifyJWT = (allowedRoles = []) => asyncHandler(async (req, _, next) => {
     const token =
-        req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
+        await req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
 
     if (!token) {
         throw new apiError(401, "Unauthorized request: No token");
